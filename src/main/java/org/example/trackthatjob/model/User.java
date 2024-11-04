@@ -1,9 +1,13 @@
 package org.example.trackthatjob.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.util.List;
 
 @Entity
+@Table(name = "users")
+@Data
 public class User {
 
     @Id
@@ -11,8 +15,8 @@ public class User {
     private Long id;
 
     private String username;
+
     private String email;
 
-    @OneToMany(mappedBy = "user")
-    private List<JobApplication> applications;
+
 }
