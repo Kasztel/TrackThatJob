@@ -30,4 +30,9 @@ public class JobApplicationController {
         JobApplication savedApplication = applicationService.saveApplication(application);
         return new ResponseEntity<>(savedApplication, HttpStatus.CREATED);
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteApplication(@PathVariable Long id) {
+        applicationService.deleteApplicationById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
 }

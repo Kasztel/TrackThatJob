@@ -23,4 +23,8 @@ public class JobApplicationService {
     public JobApplication saveApplication(JobApplication application) {
         return applicationRepository.save(application);
     }
+
+    public void deleteApplicationById(Long id) {
+        applicationRepository.deleteById(id);
+    }
 }
