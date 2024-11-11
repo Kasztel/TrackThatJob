@@ -26,6 +26,11 @@ public class JobApplicationController {
         return applicationService.getAllApplications();
     }
 
+    @GetMapping("/{status}")
+    public List<JobApplication> getApplicationsByStatus(@PathVariable String status) {
+        return applicationService.getApplicationsByStatus(status);
+    }
+
     @PostMapping
     public ResponseEntity<JobApplication> createApplication(@RequestBody JobApplication application) {
         JobApplication savedApplication = applicationService.saveApplication(application);

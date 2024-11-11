@@ -20,6 +20,9 @@ public class JobApplicationService {
         return applicationRepository.findAll();
     }
 
+    public List<JobApplication> getApplicationsByStatus(String status) {
+        return applicationRepository.findByStatus(status);
+    }
     public JobApplication saveApplication(JobApplication application) {
         return applicationRepository.save(application);
     }
