@@ -25,6 +25,11 @@ button:hover {
   background-color: #e0e0e0;
 }
 
+button.active {
+  background-color: #af4c68;
+  color: black;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
